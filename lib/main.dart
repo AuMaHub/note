@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:note/note_main.dart';
+import 'package:get/get.dart';
+import 'package:note/page/note_main.dart';
 
-void main() {
+Future<void> main() async {
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
+    return GetMaterialApp(
+      title: 'NotePad',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: NoteMainScreen(),
